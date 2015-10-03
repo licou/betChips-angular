@@ -1,0 +1,15 @@
+<div id="betHistory" class="colon-60">
+	<h2>Your bet history</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Date</th><th>Bitcoin price on that date</th><th>your bet for this date</th><th>status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="bet in betHistory track by $index">
+				<td>{{bet.bitcoin.date}}</td><td><span>{{bet.bitcoin.value}}</span></td><td>{{bet.stake}}</td><td><span>{{bet.settleToString()}}</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

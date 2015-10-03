@@ -1,0 +1,12 @@
+<div id="place-bet">
+	<form ng-controller="betCtrl">
+		<input ng-model="stake" type="number" max={{currentWallet}} min=1 name="stake" id="stake" placeholder="your stake here"/>
+
+		<select ng-model="time" ng-options="interval.value as interval.toString() for interval in ::getDefaultsBettingInterval()">
+			<option value="">For how long are you betting on ?</option>
+		</select>
+
+		<button class="bet-btn lower" ng-click="add('decrease')">BET on LOWER</button>
+		<button class="bet-btn higher" ng-click="add('increase')">BET on HIGHER</button>
+	</form>
+</div>

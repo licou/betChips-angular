@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="betchipsApp">
+	<head>
+		<title>BetChips!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="bet your chips on bitcoin current value">
+	</head>
+
+	<body>
+		<header id="main-header" class="center">
+			<h1 id="logo"class="yellow">betchips</h1>
+			<virtual-wallet></virtual-wallet>
+		</header>
+
+		<div class="center">
+			<current-bitcoin></current-bitcoin>
+
+			<place-bet></place-bet>
+
+			<current-bets></current-bets>
+
+			<bet-history></bet-history>
+			<bitcoin-history></bitcoin-history>
+		</div>
+
+		<footer class="center">Copyright &copy; alicegros 2015</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="betchipsApp.js"></script>
+    	<script src="services/services.js"></script>
+    	<script src="controllers/controllers.js"></script>
+    	<script src="directives/directives.js"></script>
+    	<link rel="stylesheet" href="styles/styles.css">
+	</body>
+</html>

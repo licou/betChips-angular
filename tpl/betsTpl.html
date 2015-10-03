@@ -1,0 +1,18 @@
+<div id="current-bets" class="colon-60">
+	<h2>current bets</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Your bets</th><th>Bitcoin price on betting</th><th>Time left</th><th></th>
+			</tr>
+		</thead>
+		<tbody ng-show="isCurrentBet()">
+			<tr ng-repeat="bet in currentBets track by $index">
+				<td class="{{bet.status}}"><p><span class="uppercase mobile-hide">BET</span> <span class="bet-chips"> {{bet.stake}} chips</span> on <span class="uppercase">{{bet.statusToString()}}</span></p></td>
+				<td><p>Bitcoin was {{bet.bitcoin.value}} USD</p></td>
+				<td class="uppercase font-bold"><p class="{{currentStateBet(bet)}}" ng-hide="bet.settled"><span>{{bet.time}}</span> seconds</p></td>
+				<td><button id="cancel" ng-hide="bet.settled" ng-click="removeBet($index)">Cancel</button><span ng-show="bet.settled">{{bet.settleToString()}}</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,14 @@
+<div id="bitcoinHistory" class="colon-60">
+	<h2>bitcoin price history</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Date</th><th>Bitcoin price on that date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="bitcoin in bitcoins track by $index">
+				<td>{{bitcoin.date}}</td><td><span class="{{bitcoin.status}}">{{bitcoin.value}}</span></td>
+		</tbody>
+	</table>
+</div>
