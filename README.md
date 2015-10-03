@@ -2,7 +2,7 @@
 
 FYC : This is a project that will be a part of 3 others, that will all do the same things, but with differents javascript frameworks (backbone.js and ember.js will follow).
 
-This application is responsible for mobile device.
+This application is responsive for mobile device.
 
 This SPA allows you to place a bet on a the current bitcoin value (that is refreshed by ajax request).
 You start the journey with 100 chips on your wallet.
